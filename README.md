@@ -4,7 +4,13 @@ This a very basic example of integration using React
 
 ## Requirements
 
-This demo uses a sandbox token based authentication so you will need to provide your sandbox token as the REACT_APP_SANDBOX_TOKEN environment variable (usually done through a `.env.local` file)
+This demo uses a trial token based authentication so you will need to provide your trial token as the REACT_APP_TRIAL_TOKEN environment variable (usually done through a `.env.local` file)
+
+## Installation
+
+In the project directory:
+
+### `yarn install`
 
 ## Running the demo
 

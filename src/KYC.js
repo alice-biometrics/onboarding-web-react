@@ -4,7 +4,7 @@ import {
   Onboarding,
   OnboardingConfig,
   DocumentType,
-  SandboxAuthenticator,
+  TrialAuthenticator,
   SelfieStageConfig,
   SelfieCapturerType,
 } from "aliceonboarding";
@@ -36,9 +36,9 @@ class KYC extends React.Component {
   }
 
   startKYC() {
-    const sandboxToken = process.env.REACT_APP_SANDBOX_TOKEN;
+    const trialToken = process.env.REACT_APP_TRIAL_TOKEN;
     const userEmail = `${Math.random().toString(36).substring(7)}@host.com`;
-    let authenticator = new SandboxAuthenticator(sandboxToken, {
+    let authenticator = new TrialAuthenticator(trialToken, {
       email: userEmail,
     });
     authenticator.execute().then((userToken) => {
