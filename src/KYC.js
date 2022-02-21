@@ -1,5 +1,4 @@
 import React from "react";
-import ReactDOM from "react-dom";
 import {
   Onboarding,
   OnboardingConfig,
@@ -9,6 +8,7 @@ import {
   SelfieCapturerType,
 } from "aliceonboarding";
 import "aliceonboarding/dist/aliceonboarding.css";
+import { Redirect } from "react-router";
 
 class KYC extends React.Component {
   state = {
@@ -16,9 +16,8 @@ class KYC extends React.Component {
   };
 
   restartAliceKYC() {
-    const element = <div id="alice"></div>;
-    ReactDOM.render(element, document.getElementById("root"));
-    this.startKYC();
+    this.props.history.push("/");
+    return <Redirect to="/" push={true} />;
   }
 
   onCancel() {
