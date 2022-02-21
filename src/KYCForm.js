@@ -13,7 +13,7 @@ import {
 class KYCForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { documentType: "" };
+    this.state = { documentType: "", showForm: true };
 
     this.handleIdCardChange = this.handleIdCardChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -27,6 +27,7 @@ class KYCForm extends React.Component {
   handleSubmit(event) {
     this.startKYC();
     event.preventDefault();
+    this.setState({ showForm: false });
   }
 
   restartAliceKYC() {
@@ -82,32 +83,38 @@ class KYCForm extends React.Component {
   }
 
   render() {
+    const container = {
+      paddingTop: "5rem",
+    };
     return (
-      <div>
-        <form onSubmit={this.handleSubmit}>
-          <label>
-            Id card
-            <input
-              type="radio"
-              name="documen-type"
-              value="idcard"
-              onChange={this.handleIdCardChange}
-            />
-          </label>
-          <label>
-            Driver license
-            <input
-              type="radio"
-              name="documen-type"
-              value="driver-license"
-              onChange={this.handleIdCardChange}
-            />
-          </label>
-          <div>
-            <input type="submit" value="Submit" />
-          </div>
-        </form>
-        <div id="alice"></div>
+      <div style={container}>
+        {this.state.showForm ? (
+          <form onSubmit={this.handleSubmit}>
+            <label>
+              Id card
+              <input
+                type="radio"
+                name="documen-type"
+                value="idcard"
+                onChange={this.handleIdCardChange}
+              />
+            </label>
+            <label>
+              Driver license
+              <input
+                type="radio"
+                name="documen-type"
+                value="driver-license"
+                onChange={this.handleIdCardChange}
+              />
+            </label>
+            <div>
+              <input type="submit" value="Submit" />
+            </div>
+          </form>
+        ) : (
+          <div id="alice"></div>
+        )}
       </div>
     );
   }

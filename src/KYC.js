@@ -67,9 +67,14 @@ class KYC extends React.Component {
   }
 
   render() {
+    const container = {
+      paddingTop : "5rem"
+    };
     return (
-      <div id="root">
-        <div id="alice"></div>
+      <div style={container}>
+        <div id="root">
+          <div id="alice"></div>
+        </div>
       </div>
     );
   }
