@@ -1,14 +1,14 @@
 import React from "react";
-import ReactDOM from "react-dom";
 import {
   Onboarding,
   OnboardingConfig,
   DocumentType,
-  SandboxAuthenticator,
+  TrialAuthenticator,
   SelfieStageConfig,
   SelfieCapturerType,
 } from "aliceonboarding";
 import "aliceonboarding/dist/aliceonboarding.css";
+import { Redirect } from "react-router";
 
 class KYC extends React.Component {
   state = {
@@ -16,9 +16,8 @@ class KYC extends React.Component {
   };
 
   restartAliceKYC() {
-    const element = <div id="alice"></div>;
-    ReactDOM.render(element, document.getElementById("root"));
-    this.startKYC();
+    this.props.history.push("/");
+    return <Redirect to="/" push={true} />;
   }
 
   onCancel() {
@@ -36,9 +35,9 @@ class KYC extends React.Component {
   }
 
   startKYC() {
-    const sandboxToken = process.env.REACT_APP_SANDBOX_TOKEN;
+    const trialToken = process.env.REACT_APP_TRIAL_TOKEN;
     const userEmail = `${Math.random().toString(36).substring(7)}@host.com`;
-    let authenticator = new SandboxAuthenticator(sandboxToken, {
+    let authenticator = new TrialAuthenticator(trialToken, {
       email: userEmail,
     });
     authenticator.execute().then((userToken) => {
@@ -68,9 +67,14 @@ class KYC extends React.Component {
   }
 
   render() {
+    const container = {
+      paddingTop : "5rem"
+    };
     return (
-      <div id="root">
-        <div id="alice"></div>
+      <div style={container}>
+        <div id="root">
+          <div id="alice"></div>
+        </div>
       </div>
     );
   }
