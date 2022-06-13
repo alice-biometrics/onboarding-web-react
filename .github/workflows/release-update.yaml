@@ -23,7 +23,7 @@ jobs:
           yarn add aliceonboarding@${RELEASE_VERSION}
       - name: Build react demo
         run: |
-          yarn build
+          yarn react-scripts build
       - name: Git - Update changes
         run: |
           yarn version ${RELEASE_VERSION} --no-git-tag-version
