@@ -1,13 +1,14 @@
-import React from "react";
+import "aliceonboarding/dist/aliceonboarding.css";
+
 import {
+  DocumentType,
   Onboarding,
   OnboardingConfig,
-  DocumentType,
-  TrialAuthenticator,
   SelfieStageConfig,
-  SelfieCapturerType,
+  TrialAuthenticator,
 } from "aliceonboarding";
-import "aliceonboarding/dist/aliceonboarding.css";
+
+import React from "react";
 import { Redirect } from "react-router";
 
 class KYC extends React.Component {
@@ -44,8 +45,8 @@ class KYC extends React.Component {
       console.log("Authentication was successful");
       let config = new OnboardingConfig()
         .withUserToken(userToken)
-        .withAddSelfieStage(new SelfieStageConfig(SelfieCapturerType.CAMERA, true))
-        .withAddDocumentStage(DocumentType.IDCARD)
+        .withAddSelfieStage(new SelfieStageConfig())
+        .withAddDocumentStage(DocumentType.IDCARD);
       new Onboarding("alice", config).run(
         this.onSuccess.bind(this),
         this.onFailure.bind(this),

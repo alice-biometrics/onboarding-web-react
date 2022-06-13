@@ -1,14 +1,15 @@
-import React from 'react'
+import "aliceonboarding/dist/aliceonboarding.css";
+
 import {
+    DocumentType,
     Onboarding,
     OnboardingConfig,
-    DocumentType,
-    TrialAuthenticator,
     SelfieStageConfig,
-    SelfieCapturerType,
-  } from "aliceonboarding";
-  import "aliceonboarding/dist/aliceonboarding.css";
-  import { Redirect } from "react-router";
+    TrialAuthenticator,
+} from "aliceonboarding";
+
+import React from 'react'
+import { Redirect } from "react-router";
 
 class KYCForm extends React.Component {
   constructor(props) {
@@ -62,9 +63,7 @@ class KYCForm extends React.Component {
         console.log("Authentication was successful");
         let config = new OnboardingConfig()
           .withUserToken(userToken)
-          .withAddSelfieStage(
-            new SelfieStageConfig(SelfieCapturerType.CAMERA, true)
-          );
+          .withAddSelfieStage(new SelfieStageConfig());
         if (this.state.documentType === "idcard") {
           config = config.withAddDocumentStage(DocumentType.IDCARD);
         }
