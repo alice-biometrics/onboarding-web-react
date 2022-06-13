@@ -26,6 +26,8 @@ jobs:
           yarn react-scripts build
       - name: Git - Update changes
         run: |
+          git config --global user.email "dev@alicebiometrics.com"
+          git config --global user.name "ALiCE Biometrics"
           yarn version --new-version ${RELEASE_VERSION}
       - name: Git - Commit changes
         run: |
