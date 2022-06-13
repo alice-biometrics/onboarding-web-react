@@ -27,11 +27,11 @@ jobs:
       - name: Git - Update changes
         run: |
           yarn version --new-version ${RELEASE_VERSION}
-          git add -u
       - name: Git - Commit changes
         run: |
           git config --global user.email "dev@alicebiometrics.com"
           git config --global user.name "ALiCE Biometrics"
+          git add -u
           git commit -m "Update version to ${RELEASE_VERSION}"
       - name: Push changes
         uses: alice-biometrics/github-push-action@master
