@@ -28,7 +28,7 @@ jobs:
         run: |
           git config --global user.email "dev@alicebiometrics.com"
           git config --global user.name "ALiCE Biometrics"
-          yarn version --new-version ${RELEASE_VERSION}
+          yarn version --new-version ${RELEASE_VERSION} --no-git-tag-version
       - name: Git - Commit changes
         run: |
           git config --global user.email "dev@alicebiometrics.com"
