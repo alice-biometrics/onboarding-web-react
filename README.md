@@ -28,12 +28,16 @@ This demo uses a trial token based authentication so you will need to provide yo
 
 In the project directory:
 
-### `yarn install`
+```console
+yarn install
+```
 
 ## Running the demo
 
 In the project directory, run:
 
-### `yarn start`
+```console
+yarn start
+```
 
 Open [http://localhost:3000](http://localhost:3000) in the browser to test the demo.
