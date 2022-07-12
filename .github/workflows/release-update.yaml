@@ -3,6 +3,9 @@ name: Release update
 on:
   release:
     types: [published]
+  push:
+   paths:
+      - '.github/workflows/release-update.yaml'
 
 env:
   ALICE_GITHUB_ACCESS_TOKEN: ${{ secrets.PUBLIC_GITHUB_ACCESS_TOKEN }}
