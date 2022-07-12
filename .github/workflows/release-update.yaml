@@ -5,7 +5,7 @@ on:
     types: [published]
 
 env:
-  ALICE_GITHUB_ACCESS_TOKEN: ${{ secrets.ALICE_GITHUB_ACCESS_TOKEN }}
+  ALICE_GITHUB_ACCESS_TOKEN: ${{ secrets.PUBLIC_GITHUB_ACCESS_TOKEN }}
   GITHUB_REF: ${{ github.ref }}
 
 jobs:
@@ -38,5 +38,5 @@ jobs:
       - name: Push changes
         uses: alice-biometrics/github-push-action@master
         with:
-          github_token: ${{ secrets.ALICE_GITHUB_ACCESS_TOKEN }}
+          github_token: ${{ secrets.PUBLIC_GITHUB_ACCESS_TOKEN }}
           
