@@ -15,14 +15,18 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
       - name: Set RELEASE_VERSION
         run: |
-           echo "RELEASE_VERSION=$(echo ${GITHUB_REF:11})" >> $GITHUB_ENV
+          echo "RELEASE_VERSION=$(echo ${GITHUB_REF:11})" >> $GITHUB_ENV
       - name: Install latest sdk version
         run: |
           yarn add aliceonboarding@${RELEASE_VERSION}
       - name: Build react demo
         run: |
+          export NODE_OPTIONS=--openssl-legacy-provider
           yarn react-scripts build
       - name: Git - Update changes
         run: |
@@ -34,7 +38,7 @@ jobs:
           git config --global user.email "dev@alicebiometrics.com"
           git config --global user.name "ALiCE Biometrics"
           git add -u
-          git commit -m "Update version to ${RELEASE_VERSION}"
+          git commit -m "chore: update version to ${RELEASE_VERSION}"
       - name: Push changes
         uses: alice-biometrics/github-push-action@master
         with:
