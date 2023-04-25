@@ -2341,10 +2341,10 @@ ajv@^8.0.1:
     require-from-string "^2.0.2"
     uri-js "^4.2.2"
 
-aliceonboarding@6.6.2:
-  version "6.6.2"
-  resolved "https://registry.yarnpkg.com/aliceonboarding/-/aliceonboarding-6.6.2.tgz#fa5d0b8d60bbb16aebc592fd8bc27290d374a633"
-  integrity sha512-4Ba64jFi/G0lCvr9JWkOHfP1ZRXRoLu3Lplm2lC6Yb6EQRCdX1buIQCZ+yTChpqXDni6tIjEwKmB5XmFIlRdYA==
+aliceonboarding@6.6.3:
+  version "6.6.3"
+  resolved "https://registry.yarnpkg.com/aliceonboarding/-/aliceonboarding-6.6.3.tgz#64bb10993c1b3c6ea1b28b181764e76cbfc4549d"
+  integrity sha512-xgD8pVODH3GxmO7qXKgqN7BRTsm1S6szobKU4PUU/QDTkdXl3jtbW3VDkFqLCX7SjivUqfFJ6ClBOLgWZUewTA==
   dependencies:
     "@fortawesome/fontawesome-svg-core" "~1.2.36"
     "@fortawesome/free-regular-svg-icons" "^5.12.1"
@@ -2368,7 +2368,6 @@ aliceonboarding@6.6.2:
     vue-i18n "8.27.1"
     vue-property-decorator "^9.1.2"
     vue-select "^3.18.3"
-    vue-tippy "^4.13.0"
     vuex "^3.6.2"
 
 alphanum-sort@^1.0.0:
@@ -5908,11 +5907,6 @@ human-signals@^1.1.1:
   resolved "https://registry.yarnpkg.com/human-signals/-/human-signals-1.1.1.tgz#c5b1cd14f50aeae09ab6c59fe63ba3395fe4dfa3"
   integrity sha512-SEQu7vl8KjNL2eoGBLF3+wAjpsNfA9XMlXAYj/3EdaNfAlxKthD1xjEQfGOUhllCGGJVNY34bRr6lPINhNjyZw==
 
-humps@^2.0.1:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/humps/-/humps-2.0.1.tgz#dd02ea6081bd0568dc5d073184463957ba9ef9aa"
-  integrity sha512-E0eIbrFWUhwfXJmsbdjRQFQPrl5pTEoKlz163j1mTqqUnU9PgR4AgB8AIITzuB3vLBdxZXyZ9TDIrwB2OASz4g==
-
 i18n-iso-countries@^7.4.0:
   version "7.4.0"
   resolved "https://registry.yarnpkg.com/i18n-iso-countries/-/i18n-iso-countries-7.4.0.tgz#d4354b3dab6b1ceca6b40636b51404f8286743c6"
@@ -8504,11 +8498,6 @@ pnp-webpack-plugin@1.6.4:
   dependencies:
     ts-pnp "^1.1.6"
 
-popper.js@^1.14.7:
-  version "1.16.1"
-  resolved "https://registry.yarnpkg.com/popper.js/-/popper.js-1.16.1.tgz#2a223cb3dc7b6213d740e40372be40de43e65b1b"
-  integrity sha512-Wb4p1J4zyFTbM+u6WuO4XstYx4Ky9Cewe4DWrel7B0w6VVICvPwdOpotjzcf6eD8TsckVnIMNONQyPIUFOUbCQ==
-
 portfinder@^1.0.26:
   version "1.0.28"
   resolved "https://registry.yarnpkg.com/portfinder/-/portfinder-1.0.28.tgz#67c4622852bd5374dd1dd900f779f53462fac778"
@@ -11027,13 +11016,6 @@ tiny-warning@^1.0.0, tiny-warning@^1.0.3:
   resolved "https://registry.yarnpkg.com/tiny-warning/-/tiny-warning-1.0.3.tgz#94a30db453df4c643d0fd566060d60a875d84754"
   integrity sha512-lBN9zLN/oAf68o3zNXYrdCt1kP8WsiGW8Oo2ka41b2IM5JL/S1CTyX1rW0mb/zSuJun0ZUrDxx4sqvYS2FWzPA==
 
-tippy.js@^4.3.5:
-  version "4.3.5"
-  resolved "https://registry.yarnpkg.com/tippy.js/-/tippy.js-4.3.5.tgz#882bff8d92f09bb0546d2826d5668c0560006f54"
-  integrity sha512-NDq3efte8nGK6BOJ1dDN1/WelAwfmh3UtIYXXck6+SxLzbIQNZE/cmRSnwScZ/FyiKdIcvFHvYUgqmoGx8CcyA==
-  dependencies:
-    popper.js "^1.14.7"
-
 tmpl@1.0.5:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/tmpl/-/tmpl-1.0.5.tgz#8683e0b902bb9c20c4f726e3c0b69f36518c07cc"
@@ -11499,14 +11481,6 @@ vue-select@^3.18.3:
   version "3.18.3"
   resolved "https://registry.yarnpkg.com/vue-select/-/vue-select-3.18.3.tgz#31f188d7181a4a86d07b937303c457efe863c4bc"
   integrity sha512-nKmwxEDO4RRoZ6lWkkVE2bpgne7IJSRzSh1pIawLI7dJLZbtJuSgA0xGaLrT0pUp+JYHBDul242PwOBDHi28vg==
-
-vue-tippy@^4.13.0:
-  version "4.13.0"
-  resolved "https://registry.yarnpkg.com/vue-tippy/-/vue-tippy-4.13.0.tgz#02634c4901c6dd270432f1a53d0c07abfe8851fd"
-  integrity sha512-olKDi2plk0Yjs8A/31FwjWHaZKpwVC0/GbDXJH6tSWLEStOnIOW4M79P07aM4KuuCZIPVmuZWXP8zmLGS9Z0pg==
-  dependencies:
-    humps "^2.0.1"
-    tippy.js "^4.3.5"
 
 vue@2.6.14:
   version "2.6.14"
