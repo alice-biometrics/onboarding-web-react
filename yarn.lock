@@ -2341,16 +2341,17 @@ ajv@^8.0.1:
     require-from-string "^2.0.2"
     uri-js "^4.2.2"
 
-aliceonboarding@6.6.3:
-  version "6.6.3"
-  resolved "https://registry.yarnpkg.com/aliceonboarding/-/aliceonboarding-6.6.3.tgz#64bb10993c1b3c6ea1b28b181764e76cbfc4549d"
-  integrity sha512-xgD8pVODH3GxmO7qXKgqN7BRTsm1S6szobKU4PUU/QDTkdXl3jtbW3VDkFqLCX7SjivUqfFJ6ClBOLgWZUewTA==
+aliceonboarding@6.6.5:
+  version "6.6.5"
+  resolved "https://registry.yarnpkg.com/aliceonboarding/-/aliceonboarding-6.6.5.tgz#a24b2df02927f2d744d83c0c9d9c3b23760ccfc2"
+  integrity sha512-jHGUZ+6WRfOlWBh84xqIur5dT79ISjpH7iwOgdEb7DNoiE6wS/debBy+IvEMv+SfN6eY+F3dJGctVivMwCjXiQ==
   dependencies:
     "@fortawesome/fontawesome-svg-core" "~1.2.36"
     "@fortawesome/free-regular-svg-icons" "^5.12.1"
     "@fortawesome/free-solid-svg-icons" "^5.10.2"
     "@fortawesome/vue-fontawesome" "^0.1.6"
     axios "^0.27.2"
+    bodymovin "^4.13.0"
     fuse.js "^6.6.2"
     i18n-iso-countries "^7.4.0"
     image-blob-reduce "^4.1.0"
@@ -2958,6 +2959,11 @@ body-parser@1.20.0:
     raw-body "2.5.1"
     type-is "~1.6.18"
     unpipe "1.0.0"
+
+bodymovin@^4.13.0:
+  version "4.13.0"
+  resolved "https://registry.yarnpkg.com/bodymovin/-/bodymovin-4.13.0.tgz#06d97c0130e2334dccb33bea638136f88a74540b"
+  integrity sha512-SdBh+kue99zDxUGe0tpX7HJ8LMpRac46jcHcWAdHJDW9Aa5Dhcc62uGn03XQS8soF5/NWx7KBzPadgm+FbtDGA==
 
 bonjour@^3.5.0:
   version "3.5.0"
