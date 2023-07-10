@@ -2341,10 +2341,10 @@ ajv@^8.0.1:
     require-from-string "^2.0.2"
     uri-js "^4.2.2"
 
-aliceonboarding@6.6.7:
-  version "6.6.7"
-  resolved "https://registry.yarnpkg.com/aliceonboarding/-/aliceonboarding-6.6.7.tgz#b6eec6003c336f275f4ad3076264c51abc71eeeb"
-  integrity sha512-iu9hlJEDzjeLwuuTfOLJMShbwxfWRgJ4uUG8PpBnJwmV+HtG0WHhqetGqM5P14xY10IT4rhL2QsKlM7pV2V4UA==
+aliceonboarding@6.6.8:
+  version "6.6.8"
+  resolved "https://registry.yarnpkg.com/aliceonboarding/-/aliceonboarding-6.6.8.tgz#1f969745936390c8d5a560f3006a8b7fe5a97dc9"
+  integrity sha512-0nFMnOaxGVhqnEdcFw9nOdW6uX35MndmB52SifcJCCk99iPAC8at7G7rJUV28f9ah7PbBRkmT2Eyr4gSW15unQ==
   dependencies:
     "@fortawesome/fontawesome-svg-core" "~1.2.36"
     "@fortawesome/free-regular-svg-icons" "^5.12.1"
@@ -2361,7 +2361,7 @@ aliceonboarding@6.6.7:
     mobile-device-detect "^0.4.3"
     ndarray "^1.0.19"
     ndarray-ops "^1.2.2"
-    onnxruntime-web "^1.14.0"
+    onnxruntime-web "1.14.0"
     semver "^7.5.3"
     uuid "^8.3.2"
     vue "2.6.14"
@@ -8116,7 +8116,7 @@ onnxruntime-common@~1.14.0:
   resolved "https://registry.yarnpkg.com/onnxruntime-common/-/onnxruntime-common-1.14.0.tgz#2bb5dac5261269779aa5fb6536ca379657de8bf6"
   integrity sha512-3LJpegM2iMNRX2wUmtYfeX/ytfOzNwAWKSq1HbRrKc9+uqG/FsEA0bbKZl1btQeZaXhC26l44NWpNUeXPII7Ew==
 
-onnxruntime-web@^1.14.0:
+onnxruntime-web@1.14.0:
   version "1.14.0"
   resolved "https://registry.yarnpkg.com/onnxruntime-web/-/onnxruntime-web-1.14.0.tgz#c8cee538781b1d4c1c6b043934f4a3e6ddf1466e"
   integrity sha512-Kcqf43UMfW8mCydVGcX9OMXI2VN17c0p6XvR7IPSZzBf/6lteBzXHvcEVWDPmCKuGombl997HgLqj91F11DzXw==
