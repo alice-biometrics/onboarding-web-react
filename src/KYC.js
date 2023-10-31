@@ -38,23 +38,30 @@ class KYC extends React.Component {
   startKYC() {
     const trialToken = process.env.REACT_APP_TRIAL_TOKEN;
     const userEmail = `${Math.random().toString(36).substring(7)}@host.com`;
-    let authenticator = new TrialAuthenticator(trialToken, {
-      email: userEmail,
-    });
-    authenticator.execute().then((userToken) => {
-      console.log("Authentication was successful");
-      let config = new OnboardingConfig()
-        .withUserToken(userToken)
-        .withAddSelfieStage(new SelfieStageConfig())
-        .withAddDocumentStage(DocumentType.IDCARD);
-      new Onboarding("alice", config).run(
-        this.onSuccess.bind(this),
-        this.onFailure.bind(this),
-        this.onCancel.bind(this)
-      );
-    }).catch(error=>{
-      console.log("Error on authentication: " + error);
-    });
+    let authenticator = new TrialAuthenticator(
+      trialToken,
+      {
+        email: userEmail,
+      },
+      "sandbox"
+    );
+    authenticator
+      .execute()
+      .then((userToken) => {
+        console.log("Authentication was successful");
+        let config = new OnboardingConfig()
+          .withUserToken(userToken)
+          .withAddSelfieStage(new SelfieStageConfig())
+          .withAddDocumentStage(DocumentType.IDCARD);
+        new Onboarding("alice", config).run(
+          this.onSuccess.bind(this),
+          this.onFailure.bind(this),
+          this.onCancel.bind(this)
+        );
+      })
+      .catch((error) => {
+        console.log("Error on authentication: " + error);
+      });
   }
 
   componentDidMount() {
@@ -69,7 +76,7 @@ class KYC extends React.Component {
 
   render() {
     const container = {
-      paddingTop : "5rem"
+      paddingTop: "5rem",
     };
     return (
       <div style={container}>
