@@ -2341,10 +2341,10 @@ ajv@^8.0.1:
     require-from-string "^2.0.2"
     uri-js "^4.2.2"
 
-aliceonboarding@7.1.6:
-  version "7.1.6"
-  resolved "https://registry.yarnpkg.com/aliceonboarding/-/aliceonboarding-7.1.6.tgz#74fc2a62b5f3eafc562701db68a4b12715935ec8"
-  integrity sha512-bYQBtgI7uHJoTQLEGWWEFp2UVnjszDZaWC99i66WMK/kMqjahOMD0KYGymryn0o18wXZpYLtBuXcLVWPfH0DRg==
+aliceonboarding@2.7.0:
+  version "2.7.0"
+  resolved "https://registry.yarnpkg.com/aliceonboarding/-/aliceonboarding-2.7.0.tgz#14807ce647473ecd032897d8099382dca7d75349"
+  integrity sha512-yejnCOkuf/S9j1krQvwbsmyaSUMpzKVRZNoOuhC/j9AR1DF3MRkk3f1M2up95UixE0troKEhK4TA2CzLlF4kKQ==
   dependencies:
     "@fortawesome/fontawesome-svg-core" "~1.2.36"
     "@fortawesome/free-regular-svg-icons" "^5.12.1"
