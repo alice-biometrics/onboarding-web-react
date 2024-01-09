@@ -1,14 +1,14 @@
 import "aliceonboarding/dist/aliceonboarding.css";
 
 import {
-    DocumentType,
-    Onboarding,
-    OnboardingConfig,
-    SelfieStageConfig,
-    TrialAuthenticator,
+  DocumentType,
+  Onboarding,
+  OnboardingConfig,
+  SelfieStageConfig,
+  TrialAuthenticator,
 } from "aliceonboarding";
 
-import React from 'react'
+import React from "react";
 import { Redirect } from "react-router";
 
 class KYCForm extends React.Component {
@@ -54,8 +54,12 @@ class KYCForm extends React.Component {
   startKYC() {
     const trialToken = process.env.REACT_APP_TRIAL_TOKEN;
     const userEmail = `${Math.random().toString(36).substring(7)}@host.com`;
-    let authenticator = new TrialAuthenticator(trialToken, {
-      email: userEmail,
+    let authenticator = new TrialAuthenticator({
+      sandboxToken: trialToken,
+      userInfo: {
+        email: userEmail,
+      },
+      environment: "staging",
     });
     authenticator
       .execute()
@@ -63,14 +67,18 @@ class KYCForm extends React.Component {
         console.log("Authentication was successful");
         let config = new OnboardingConfig()
           .withUserToken(userToken)
-          .withAddSelfieStage(new SelfieStageConfig());
+          .withAddSelfieStage({ selfieStageConfig: new SelfieStageConfig({}) });
         if (this.state.documentType === "idcard") {
-          config = config.withAddDocumentStage(DocumentType.IDCARD);
+          config = config.withAddDocumentStage({
+            documentType: DocumentType.IDCARD,
+          });
         }
         if (this.state.documentType === "driver-license") {
-          config = config.withAddDocumentStage(DocumentType.DRIVERLICENSE);
+          config = config.withAddDocumentStage({
+            documentType: DocumentType.DRIVERLICENSE,
+          });
         }
-        new Onboarding("alice", config).run(
+        new Onboarding({ idSelector: "alice", onboardingConfig: config }).run(
           this.onSuccess.bind(this),
           this.onFailure.bind(this),
           this.onCancel.bind(this)
@@ -119,6 +127,4 @@ class KYCForm extends React.Component {
   }
 }
 
-
-
-export default KYCForm
+export default KYCForm;
