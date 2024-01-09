@@ -38,22 +38,22 @@ class KYC extends React.Component {
   startKYC() {
     const trialToken = process.env.REACT_APP_TRIAL_TOKEN;
     const userEmail = `${Math.random().toString(36).substring(7)}@host.com`;
-    let authenticator = new TrialAuthenticator(
-      trialToken,
-      {
+    let authenticator = new TrialAuthenticator({
+      sandboxToken: trialToken,
+      userInfo: {
         email: userEmail,
       },
-      "sandbox"
-    );
+      environment: "sandbox",
+    });
     authenticator
       .execute()
       .then((userToken) => {
         console.log("Authentication was successful");
         let config = new OnboardingConfig()
           .withUserToken(userToken)
-          .withAddSelfieStage(new SelfieStageConfig())
-          .withAddDocumentStage(DocumentType.IDCARD);
-        new Onboarding("alice", config).run(
+          .withAddSelfieStage({ selfieStageConfig: new SelfieStageConfig({}) })
+          .withAddDocumentStage({ documentType: DocumentType.IDCARD });
+        new Onboarding({ idSelector: "alice", onboardingConfig: config }).run(
           this.onSuccess.bind(this),
           this.onFailure.bind(this),
           this.onCancel.bind(this)
