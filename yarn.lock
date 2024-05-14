@@ -2341,10 +2341,10 @@ ajv@^8.0.1:
     require-from-string "^2.0.2"
     uri-js "^4.2.2"
 
-aliceonboarding@8.1.10:
-  version "8.1.10"
-  resolved "https://registry.yarnpkg.com/aliceonboarding/-/aliceonboarding-8.1.10.tgz#c09255f4ed673c8f6fabb5345e5a44342435f557"
-  integrity sha512-DHkSVetiEYG/iVzPSz67nrTWYlfQZGjTp2R5g77wa3YIphyn8CgBtZqtua3VrK6DVg1Dk09f7oe/XZmP0bk99g==
+aliceonboarding@8.1.11:
+  version "8.1.11"
+  resolved "https://registry.yarnpkg.com/aliceonboarding/-/aliceonboarding-8.1.11.tgz#5750b3ec1fed15ee83fb6b73016fe7c42302cedf"
+  integrity sha512-FEaKs4YXSj9CUZn06JSzIX3i4u+ReyT2WTdRwixJqy5owcmEfAM8fuQLOxs2QLg/tHjKZrAaTO+Nkp5eN2kPcA==
   dependencies:
     "@fortawesome/fontawesome-svg-core" "~1.2.36"
     "@fortawesome/free-regular-svg-icons" "^5.12.1"
@@ -2352,6 +2352,7 @@ aliceonboarding@8.1.10:
     "@fortawesome/vue-fontawesome" "^0.1.6"
     axios "^1.6.8"
     bodymovin "^4.13.0"
+    fix-webm-duration "^1.0.5"
     fuse.js "^6.6.2"
     i18n-iso-countries "^7.4.0"
     image-blob-reduce "^4.1.0"
@@ -5243,6 +5244,11 @@ find-up@^3.0.0:
   integrity sha512-1yD6RmLI1XBfxugvORwlck6f75tYL+iR0jqwsOrOxMZyGYqUuDhJ0l4AXdO1iX/FTs9cBAMEk1gWSEx1kSbylg==
   dependencies:
     locate-path "^3.0.0"
+
+fix-webm-duration@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/fix-webm-duration/-/fix-webm-duration-1.0.5.tgz#da4558a92196a677302bfc54780b494dd5336a96"
+  integrity sha512-b6oula3OfSknx0aWoLsxvp4DVIYbwsf+UAkr6EDAK3iuMYk/OSNKzmeSI61GXK0MmFTEuzle19BPvTxMIKjkZg==
 
 flat-cache@^3.0.4:
   version "3.0.4"
