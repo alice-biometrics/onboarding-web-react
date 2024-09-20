@@ -2336,16 +2336,16 @@ ajv@^8.0.1:
     require-from-string "^2.0.2"
     uri-js "^4.2.2"
 
-aliceonboarding@9.0.1:
-  version "9.0.1"
-  resolved "https://registry.yarnpkg.com/aliceonboarding/-/aliceonboarding-9.0.1.tgz#4a13967415d5a38667e8a90828931fabe7903f65"
-  integrity sha512-S3psruvADrhawZ+w/wNa0I+eDgVdHXb4aNatXhiNa+ajHyqyigRwLJ3RlXOrJWFBb0zuWtSW0rzNSfWKypuhwQ==
+aliceonboarding@9.0.2:
+  version "9.0.2"
+  resolved "https://registry.yarnpkg.com/aliceonboarding/-/aliceonboarding-9.0.2.tgz#aeda3117d3f84aa008f98001a5c4ea5fc5284ac8"
+  integrity sha512-KBOW1ln/dlfAAh1DDhRklwt0KCK/MwXFx+4fLYoe/wH3zJVpDPrNKCtcYaLcvmsi5YshPSXoqZT0dDyRepW05Q==
   dependencies:
     "@fortawesome/fontawesome-svg-core" "~1.2.36"
     "@fortawesome/free-regular-svg-icons" "^5.12.1"
     "@fortawesome/free-solid-svg-icons" "^5.10.2"
     "@fortawesome/vue-fontawesome" "^0.1.6"
-    axios "^1.6.8"
+    axios "1.7.7"
     bodymovin "^4.13.0"
     fix-webm-duration "^1.0.5"
     fuse.js "^6.6.2"
@@ -2655,10 +2655,10 @@ axe-core@^4.3.5:
   resolved "https://registry.yarnpkg.com/axe-core/-/axe-core-4.4.2.tgz#dcf7fb6dea866166c3eab33d68208afe4d5f670c"
   integrity sha512-LVAaGp/wkkgYJcjmHsoKx4juT1aQvJyPcW09MLCjVTh3V2cc6PnyempiLMNH5iMdfIX/zdbjUx2KDjMLCTdPeA==
 
-axios@^1.6.8:
-  version "1.6.8"
-  resolved "https://registry.yarnpkg.com/axios/-/axios-1.6.8.tgz#66d294951f5d988a00e87a0ffb955316a619ea66"
-  integrity sha512-v/ZHtJDU39mDpyBoFVkETcd/uNdxrWRrg3bKpOKzXFA6Bvqopts6ALSMU3y6ijYxbw2B+wPrIv46egTzJXCLGQ==
+axios@1.7.7:
+  version "1.7.7"
+  resolved "https://registry.yarnpkg.com/axios/-/axios-1.7.7.tgz#2f554296f9892a72ac8d8e4c5b79c14a91d0a47f"
+  integrity sha512-S4kL7XrjgBmvdGut0sN3yJxqYzrDOnivkBiN0OFs6hLiUam3UPvswUo0kqGyhqUZGEOytHyumEdXsAkgCOUf3Q==
   dependencies:
     follow-redirects "^1.15.6"
     form-data "^4.0.0"
