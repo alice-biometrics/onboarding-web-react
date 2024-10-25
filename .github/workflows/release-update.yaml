@@ -44,4 +44,30 @@ jobs:
         with:
           github_token: ${{ secrets.PUBLIC_GITHUB_ACCESS_TOKEN }}
           branch: master
-          
+
+  notify-success:
+    needs: [react-demo-release-update]
+    if: ${{ !contains(github.event.release.tag_name, 'rc') && success() }}
+    uses: alice-biometrics/actions/.github/workflows/notify-slack.yml@v1.55
+    with:
+      channel: releases
+      title: Success on Release Workflow
+      message: "Onboarding web react demo successfully updated :rocket:"
+      icon-emoji: ":react:"
+      username: React demo
+    secrets:
+      slack_token: ${{ secrets.SLACK_WEBHOOK_PRODUCTION }}
+
+  notify-failure:
+    needs: [react-demo-release-update]
+    if: ${{ !contains(github.event.release.tag_name, 'rc') && failure() }}
+    uses: alice-biometrics/actions/.github/workflows/notify-slack.yml@v1.55
+    with:
+      channel: releases
+      title: Failure on Release Workflow
+      message: ${{ needs.build.outputs.failure_info }}
+      icon-emoji: ":react:"
+      username: React demo
+      color: danger
+    secrets:
+      slack_token: ${{ secrets.SLACK_WEBHOOK_PRODUCTION }}
